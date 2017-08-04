@@ -1,12 +1,5 @@
 # -*- coding: utf-8 -*-
-
-# Define here the models for your scraped items
-#
-# See documentation in:
-# http://doc.scrapy.org/en/latest/topics/items.html
-
 import scrapy
-
 
 class Page(scrapy.Item):
     # define the fields for your item here like:
@@ -46,7 +39,6 @@ class Page(scrapy.Item):
     outlinks = scrapy.Field()
     external_outlinks = scrapy.Field()
     referrer = scrapy.Field()
-
 
 class BrokenLinksItem(scrapy.Item):
     # define the fields for your item here like:

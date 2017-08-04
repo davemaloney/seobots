@@ -20,12 +20,6 @@ def sitemap_to_array(url):
         results.append(item['loc'])
     return results
 
-# __init__ is called to get the spider name so avoid doing any extra work
-# in init such as downloading files.
-#
-# args are automatically made available to the spider.
-
-
 def start_requests(self):
     # update rules
     # load target domain and then use it once to define the rules
@@ -37,9 +31,9 @@ def start_requests(self):
     self.rules = (
         # If a link is within the target domain, follow it.
         Rule(LinkExtractor(allow_domains=[allowed_domains], unique=True),
-            callback='parse_item',
-            process_links='clean_links',
-            follow=True),
+             callback='parse_item',
+             process_links='clean_links',
+             follow=True),
         # Crawl external links and don't follow them
         # Rule(LinkExtractor(unique=True),
         #     callback='parse_item',
@@ -70,5 +64,3 @@ def start_requests(self):
         # pass array of dictionaries to set cookies.
         # http://doc.scrapy.org/en/latest/topics/request-response.html#topics-request-response
         yield scrapy.Request(url, dont_filter=True)
-
-

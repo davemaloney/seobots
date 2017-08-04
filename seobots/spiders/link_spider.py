@@ -2,7 +2,7 @@
 import scrapy
 from scrapy.spiders import CrawlSpider
 from seobots.items import BrokenLinksItem
-from start_requests import start_requests
+from seobots.spiders.start_requests import start_requests
 
 class LinkSpiderSpider(CrawlSpider):
     name = "link_spider"
