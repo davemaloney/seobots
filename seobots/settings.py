@@ -16,7 +16,7 @@ NEWSPIDER_MODULE = 'seobots.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-USER_AGENT = 'ae_spiders (+http://www.alignedenergy.com)'
+USER_AGENT = 'seo_spiders'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
